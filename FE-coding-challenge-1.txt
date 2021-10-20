@@ -9,7 +9,7 @@ x. Update the main view to contain:
 x. Welcome Page:
     x. Contains a centered header with the text “Welcome”
 5. Listing Page:
-    a. Contains a search field
+    x. Contains a search field
         a.1. When the field is empty, the first 10 items should show
         a.2. When the search field contains text, any items who’s name property contains the search text should be list, up to 10 items
     b. Contains a label above the listing showing the total number of items. I.e. “Total: N”

@@ -1,19 +1,29 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Welcome</router-link> |
-      <router-link to="/listing">Listing</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="container">
+    <HeaderNav />
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
+
+<script>
+import HeaderNav from './components/HeaderNav.vue'
+
+export default {
+
+  components: {
+    HeaderNav
+  }
+}
+
+</script>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
