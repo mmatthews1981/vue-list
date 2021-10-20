@@ -1,0 +1,60 @@
+AC:
+1. Using vue-cli or Vue UI, create a vue boilerplate app
+2. Install vue-router
+3. Update the main view to contain:
+    a. A navigation bar or side-navigation with two links
+        a.1. Welcome - routed to /welcome
+        a.2. Listing - routed to /listing
+    b. The content section will contain the welcome page and listing page
+4. Welcome Page:
+    a. Contains a centered header with the text “Welcome”
+5. Listing Page:
+    a. Contains a search field
+        a.1. When the field is empty, the first 10 items should show
+        a.2. When the search field contains text, any items who’s name property contains the search text should be list, up to 10 items
+    b. Contains a label above the listing showing the total number of items. I.e. “Total: N”
+    c. Contains a list which has the following criteria:
+        c.1. Each list item contains:
+            - An avatar containing the initials of the item’s name. 32px width and height
+            - The name of the item followed by the parenthesized id
+            - The subtitle of the item
+        c.2 List items should have a border and shadow
+6. The provided data should be placed into a new class which is imported into and used by the listing page
+7. The README should give directions of how to run the project locally
+8. The app should keep accessibility in mind
+
+NOTE:
+1. No tests required
+2. Leverage SASS, JS, and Vue as you see fit
+3. The returned project should install and run using npm
+4. This challenge is intentionally vague in order to see how you code, etc
+5. The data is given as an object where the each property represents the corresponding item's id, and
+   it's value contains the corresponding name and subtitle
+
+DATA:
+
+{
+  '1': { name: 'Number Uno', subtitle: 'The first one!' },
+  '10': { name: 'Number Ten', subtitle: 'The tenth one!' },
+  '2': { name: 'Johnny Magic', subtitle: 'Has a rad car.' },
+  '33': { name: 'OK', subtitle: 'What?' },
+  '4': { name: 'Hello World', subtitle: 'Hi tiny world.' },
+  '555': { name: 'Cinco Cinco Cinco', subtitle: 'Sunday Sunday Sunday' },
+  '6': { name: 'Person Six', subtitle: 'There is not enough data in the universe to describe this particular entry' },
+  '7': { name: 'George M.', subtitle: '' },
+  '8': { name: 'Michael J. Fox', subtitle: null },
+  '9': { name: 'Captain C.', subtitle: 'Super Cool' },
+  '000': { name: 'Edwin C.', subtitle: '___.___.___' },
+  'a': { name: 'Josh I.', subtitle: 'The coolest.' },
+  'b': { name: 'Todd_C', subtitle: 'Why?' },
+  'aa': { name: 'Ol\' Hambone', subtitle: 13 },
+  'cde': { name: 'Beef Supreme', subtitle: [] },
+  'f': { name: 'Tim_ERIC', subtitle: 'A & B, 123' },
+  'ghi': { name: '', subtitle: 'Who is this?' },
+  'k': { name: 'someone Else', subtitle: { 'abc': 'ok' } },
+  'hello': { name: 'Okee Dokey', subtitle: 'Artichokey' },
+  'there!': { name: 'Half-Shark-Alligator-Half-Man', subtitle: 'Kool' },
+  ' ': { name: '', subtitle: '098' },
+  'nope': { name: null, subtitle: '' },
+  'awesome': { name: 'The Champ', subtitle: 'ZZZBCBJJBJBEBFJBEWBFBEWWJBJBFEWFBEWJBFJJEBWJFEW#R#@J#BJQBBQWDWQWDBJBJBDQWBJBJEWFBF' },
+}
