@@ -1,4 +1,6 @@
 <template>
+<div>
+
   <div class="row">
     <div class="col">
       <h2>This is the List page</h2>
@@ -6,15 +8,22 @@
         Search
       </label>
       <input id="search" class="form-control" type='text'>
-      
-      <div v-for="(item, index) in data" :key="index">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4" v-for="(item, index) in data" :key="index">
         Avatar: {{ item.name }}({{ index }}): {{ item.subtitle }}
-      </div>
     </div>
   </div>
     
-
+</div>
 </template>
+
+<style>
+  div {
+    word-wrap: break-word;
+  }
+</style>
 
 <script>
 
