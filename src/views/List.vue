@@ -2,11 +2,11 @@
   <div class="listing">
     <div>This is the List page</div>
     <input type='text'>
-    <ul>
-      <li v-for="(value, key) in data" :key="key">
-        {{ key }}, {{ value }}
-      </li>
-</ul>
+
+      <div v-for="(item, index) in data" :key="index">
+        Avatar: {{ item.name }}({{ index }}): {{ item.subtitle }}
+      </div>
+
   </div>
 </template>
 
