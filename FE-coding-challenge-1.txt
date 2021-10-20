@@ -1,13 +1,13 @@
 AC:
-1. Using vue-cli or Vue UI, create a vue boilerplate app
-2. Install vue-router
-3. Update the main view to contain:
-    a. A navigation bar or side-navigation with two links
-        a.1. Welcome - routed to /welcome
-        a.2. Listing - routed to /listing
-    b. The content section will contain the welcome page and listing page
-4. Welcome Page:
-    a. Contains a centered header with the text “Welcome”
+X. Using vue-cli or Vue UI, create a vue boilerplate app
+X. Install vue-router
+x. Update the main view to contain:
+    x. A navigation bar or side-navigation with two links
+        x.1. Welcome - routed to /welcome
+        x.2. Listing - routed to /listing
+    x. The content section will contain the welcome page and listing page
+x. Welcome Page:
+    x. Contains a centered header with the text “Welcome”
 5. Listing Page:
     a. Contains a search field
         a.1. When the field is empty, the first 10 items should show
