@@ -11,8 +11,15 @@
     </div>
   </div>
   <div class="row">
+    <h2>Total: {{ totalLength }} </h2>
     <div class="col-4" v-for="(item, index) in data" :key="index">
-        Avatar: {{ item.name }}({{ index }}): {{ item.subtitle }}
+      <div class="card">
+        <div class="card-body">
+          <div class="avatar">{{ initials(item.name) }}</div>
+          <div class="card-title">{{ item.name }} ({{ index }})</div>
+          <p class="card-text">{{ item.subtitle }}</p>
+        </div>
+      </div>
     </div>
   </div>
     
@@ -22,6 +29,12 @@
 <style>
   div {
     word-wrap: break-word;
+  }
+
+  .card {
+    margin: 1rem;
+    border-width: 3px;
+    box-shadow: 10px 10px gray;
   }
 </style>
 
@@ -35,6 +48,18 @@ export default {
     return {
       data: getData(),
     };
+  },
+  computed: {
+    totalLength() {
+      return Object.keys(this.data).length;
+    },
+    
+  },
+  methods: {
+    initials(name) {
+      return name ? name : ""
+
+    }
   },
   components: {
     //Welcome
