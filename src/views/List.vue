@@ -20,7 +20,6 @@
             <div class="card-title">{{ item.name }} ({{ index }})</div>
             <p class="card-text">{{ item.subtitle }}</p>
           </div>
-          
         </div>
       </div>
     </div>
