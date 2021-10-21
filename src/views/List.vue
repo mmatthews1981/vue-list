@@ -15,9 +15,12 @@
     <div class="col-4" v-for="(item, index) in data" :key="index">
       <div class="card">
         <div class="card-body">
-          <div class="avatar">{{ initials(item.name) }}</div>
-          <div class="card-title">{{ item.name }} ({{ index }})</div>
-          <p class="card-text">{{ item.subtitle }}</p>
+          <div class="avatar bg-primary d-inline-block text-white">{{ initials(item.name) }}</div>
+          <div class="d-inline-block">
+            <div class="card-title">{{ item.name }} ({{ index }})</div>
+            <p class="card-text">{{ item.subtitle }}</p>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -27,14 +30,22 @@
 </template>
 
 <style>
-  div {
+  * {
     word-wrap: break-word;
+    word-break: break-all;
   }
 
   .card {
     margin: 1rem;
     border-width: 3px;
     box-shadow: 10px 10px gray;
+  }
+
+  .avatar {
+    text-transform: capitalize;
+    height: 32px;
+    width: 32px;
+    border-radius: 20px;
   }
 </style>
 
@@ -53,13 +64,16 @@ export default {
     totalLength() {
       return Object.keys(this.data).length;
     },
-    
   },
   methods: {
     initials(name) {
-      return name ? name : ""
-
-    }
+      if(name) {
+        let split = name.split(' ');
+        split.forEach(function(el, idx, arr){ arr[idx] = el[0] });
+        return split.join('');
+      }
+      return "?";
+    },
   },
   components: {
     //Welcome

@@ -16,8 +16,8 @@ x. Welcome Page:
     c. Contains a list which has the following criteria:
         c.1. Each list item contains:
             - An avatar containing the initials of the item’s name. 32px width and height
-            - The name of the item followed by the parenthesized id
-            - The subtitle of the item
+            x The name of the item followed by the parenthesized id
+            x The subtitle of the item
         c.2 List items should have a border and shadow
 6. The provided data should be placed into a new class which is imported into and used by the listing page
 7. The README should give directions of how to run the project locally
