@@ -85,7 +85,7 @@ export default {
         return asArray.filter(function(el){
           var thename = el[1].name ? el[1].name.toString() : "";
           console.log(thename)
-          return thename.startsWith(vm.searchstring);
+          return thename.includes(vm.searchstring);
 
         });
       }
