@@ -76,10 +76,19 @@ export default {
   },
   computed: {
     totalLength() {
-      return Object.keys(this.data).length;
+      return this.data.length;
     },
     data() {
-      var asArray = Object.entries(getData());
+      var vm = this;
+      var asArray = Object.entries(JSON.parse(JSON.stringify(getData())));
+      if(vm.searchstring){
+        return asArray.filter(function(el){
+          var thename = el[1].name ? el[1].name.toString() : "";
+          console.log(thename)
+          return thename.startsWith(vm.searchstring);
+
+        });
+      }
       return asArray;
     },
   },
