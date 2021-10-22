@@ -65,7 +65,7 @@
 </style>
 
 <script>
-import {getData} from '../services/getData';
+import {TheData} from '../services/getData';
 
 export default {
   name: "List",
@@ -80,13 +80,12 @@ export default {
     },
     data() {
       var vm = this;
-      var asArray = Object.entries(getData());
+      var thedata = new TheData;
+      var asArray = Object.entries(thedata.getData());
       if(vm.searchstring){
         return asArray.filter(function(el){
           var thename = el[1].name ? el[1].name.toString() : "";
-          console.log(thename)
           return thename.includes(vm.searchstring);
-
         });
       }
       return asArray;
@@ -98,10 +97,7 @@ export default {
         let split = name.split(' ');
         split.forEach(function(el, idx, arr){ arr[idx] = el[0] });
         let res = split.join('');
-        if(res.length > 2){
-          return res[0]+res[res.length-1]
-        }
-        return res;
+        return res.length > 2 ? res[0]+res[res.length-1] : res;
       }
       return "?";
     },

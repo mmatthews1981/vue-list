@@ -8,10 +8,10 @@ x. Update the main view to contain:
     x. The content section will contain the welcome page and listing page
 x. Welcome Page:
     x. Contains a centered header with the text “Welcome”
-5. Listing Page:
+x. Listing Page:
     x. Contains a search field
-        a.1. When the field is empty, the first 10 items should show
-        a.2. When the search field contains text, any items who’s name property contains the search text should be list, up to 10 items
+        x.1. When the field is empty, the first 10 items should show
+        x.2. When the search field contains text, any items who’s name property contains the search text should be list, up to 10 items
     x. Contains a label above the listing showing the total number of items. I.e. “Total: N”
     x. Contains a list which has the following criteria:
         x.1. Each list item contains:
@@ -19,7 +19,7 @@ x. Welcome Page:
             x The name of the item followed by the parenthesized id
             x The subtitle of the item
         x.2 List items should have a border and shadow
-6. The provided data should be placed into a new class which is imported into and used by the listing page
+x. The provided data should be placed into a new class which is imported into and used by the listing page
 7. The README should give directions of how to run the project locally
 8. The app should keep accessibility in mind
 
