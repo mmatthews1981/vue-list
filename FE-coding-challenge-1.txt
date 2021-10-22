@@ -13,12 +13,12 @@ x. Welcome Page:
         a.1. When the field is empty, the first 10 items should show
         a.2. When the search field contains text, any items who’s name property contains the search text should be list, up to 10 items
     x. Contains a label above the listing showing the total number of items. I.e. “Total: N”
-    c. Contains a list which has the following criteria:
-        c.1. Each list item contains:
-            - An avatar containing the initials of the item’s name. 32px width and height
+    x. Contains a list which has the following criteria:
+        x.1. Each list item contains:
+            x An avatar containing the initials of the item’s name. 32px width and height
             x The name of the item followed by the parenthesized id
             x The subtitle of the item
-        c.2 List items should have a border and shadow
+        x.2 List items should have a border and shadow
 6. The provided data should be placed into a new class which is imported into and used by the listing page
 7. The README should give directions of how to run the project locally
 8. The app should keep accessibility in mind
