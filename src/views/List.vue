@@ -80,7 +80,7 @@ export default {
     },
     data() {
       var vm = this;
-      var asArray = Object.entries(JSON.parse(JSON.stringify(getData())));
+      var asArray = Object.entries(getData());
       if(vm.searchstring){
         return asArray.filter(function(el){
           var thename = el[1].name ? el[1].name.toString() : "";
