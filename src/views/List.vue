@@ -15,7 +15,9 @@
     <div class="col-4" v-for="(item, index) in data" :key="index">
       <div class="card">
         <div class="card-body">
-          <div class="avatar bg-primary d-inline-block text-white">{{ initials(item.name) }}</div>
+          <div class="circle bg-primary">
+            <span class="initials text-white">{{ initials(item.name) }}</span>
+          </div>
           <div class="d-inline-block">
             <div class="card-title">{{ item.name }} ({{ index }})</div>
             <p class="card-text">{{ item.subtitle }}</p>
@@ -28,7 +30,7 @@
 </div>
 </template>
 
-<style>
+<style scoped>
   * {
     word-wrap: break-word;
     word-break: break-all;
@@ -45,6 +47,20 @@
     height: 32px;
     width: 32px;
     border-radius: 20px;
+  }
+
+  .circle {
+    border-radius: 50%;
+    height: 32px;
+    text-align: center;
+    width: 32px;
+  }
+
+  .initials {
+    line-height: 1;
+    position: relative;
+    top: 6px;
+    text-transform: capitalize;
   }
 </style>
 
@@ -69,7 +85,11 @@ export default {
       if(name) {
         let split = name.split(' ');
         split.forEach(function(el, idx, arr){ arr[idx] = el[0] });
-        return split.join('');
+        let res = split.join('');
+        if(res.length > 2){
+          return res[0]+res[res.length-1]
+        }
+        return res;
       }
       return "?";
     },
