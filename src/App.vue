@@ -1,42 +1,43 @@
 <template>
-  <div id="app" class="container">
+
+  <div id="app">
     <HeaderNav />
-    <main>
-      <router-view />
+    <main class="flex-shrink-1">
+      <router-view :easteregg.sync="easteregg" />
     </main>
-  </div>
+    <div class="easter-egg">
+      <img alt="Easter Egg" src="./assets/easter.png" @click="easteregg = !easteregg" tabindex="0">
+    </div>
+
+</div>
+  
 </template>
 
 <script>
 import HeaderNav from './components/HeaderNav.vue'
-
 export default {
 
   components: {
-    HeaderNav
-  }
+    HeaderNav,
+  },
+  data: function() {
+    return {
+      easteregg: false,
+    };
+  },
+
 }
 
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style scoped>
+    .easter-egg {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 2rem;
+    }
+    .easter-egg img {
+        height: 48px;
+    }
 </style>

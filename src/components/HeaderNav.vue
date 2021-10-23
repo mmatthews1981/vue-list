@@ -1,6 +1,8 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <router-link to="/" class="navbar-brand">Vue List</router-link>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <router-link to="/" class="navbar-brand">
+        <img alt="Vue logo" src="../assets/logo.png">Vue List
+    </router-link>
     <button
           class="navbar-toggler"
           type="button"
@@ -24,3 +26,11 @@
     </div>
     </nav>
 </template>
+
+<style scoped>
+
+img {
+    max-height: 48px;
+}
+
+</style>

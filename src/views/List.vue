@@ -1,6 +1,6 @@
 <template>
 <div>
-
+<div class="container">
   <div class="row">
     <div class="col">
       <h2>This is the List page</h2>
@@ -12,7 +12,7 @@
   </div>
   <div class="row">
     <h2>Total: {{ totalLength }} </h2>
-    <div class="col-4" v-for="(item, index) in data.slice(0,10)" :key="index">
+    <div class="col-md-4" v-for="(item, index) in data.slice(0,10)" :key="index">
       <div class="card">
         <div class="card-body">
           <div class="circle bg-primary">
@@ -26,6 +26,8 @@
       </div>
     </div>
   </div>
+</div>
+
     
 </div>
 </template>
@@ -79,12 +81,12 @@ export default {
       return this.data.length;
     },
     data() {
-      var vm = this;
-      var thedata = new TheData;
-      var asArray = Object.entries(thedata.getData());
+      let vm = this;
+      let thedata = new TheData;
+      let asArray = Object.entries(thedata.getData());
       if(vm.searchstring){
         return asArray.filter(function(el){
-          var thename = el[1].name ? el[1].name.toString() : "";
+          let thename = el[1].name ? el[1].name.toString() : "";
           return thename.includes(vm.searchstring);
         });
       }
@@ -102,9 +104,6 @@ export default {
       return "?";
     },
   },
-  components: {
-    //Welcome
-  }
 };
 
 </script>

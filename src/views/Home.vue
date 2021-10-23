@@ -1,18 +1,81 @@
 <template>
-  <div class="row">
-    <div class="col">
-      <h1 class="text-center">Welcome!</h1>
-      <p>This site is live! https://inspiring-haibt-86ddb3.netlify.app</p>
-      <p>Completing this challenge was interesting. It's a relatively simple task done in a system I'm not fully fluent in yet, so I learned quite a lot in the process. It was made very clear to me, in both the instructions and when I asked for clarification, that this code test is as much a technical checkup (and it's clearly not more than that) as a serious examination of what a developer would do with vague requirements.</p>
-      <p>As a rule, my first response to vague or ill-defined requirements is to go pester the stakeholder, PM, or whoever else is making this request for clarification. The vast majority of the time, vague requirements come from weak writing, and getting the person talking brings up all the detail I need. The rest of the time, the person making the request doesn't really know what they want, and can't give me more information. I'm treating this project like that. In this case, my preferred approach is to take the letter of the vague requirement and implement is as simply as possible, just to get something up on the screen quickly.</p>
-      <p>My approach is that no matter how hard I try to suss out a correct answer from a vague requirement, it's a guess and I'm probably going to guess wrong. If I'm going to be wrong, better to fail fast and create something simple but tangible, and now I have a thing I can show the stakeholder who can now probably tell me how my implementation is wrong. It's very rare that a requirement can't be clarified after this process, though it might take a couple of rounds of revisions to let the stakeholder really refine what they're envisioning.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">Welcome!</h1>
+      </div>
+      <div class="col-md-3">
+        <p>This site is <a href="https://inspiring-haibt-86ddb3.netlify.app">live</a> thanks to Netlify.</p>
+        <p><a href="https://github.com/mmatthews1981/vue-list">https://github.com/mmatthews1981/vue-list</a></p>
+        <p>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+      </div>
+      <div class="col-md-9">
+        <div v-if="easteregg">
+          <p>Congratulations, you found the easter egg!</p>
+          <p>
+            Completing this challenge was interesting. It's a relatively simple
+            task done in a system I'm not fully fluent in yet (both Vue SPAs and
+            ES6, thanks to a career full of legacy apps and requirements to
+            support old IE), so I learned quite a lot in the process. It was
+            made very clear to me, in both the instructions and when I asked for
+            clarification, that this code test is as much a technical checkup as
+            a serious examination of what a developer would do with vague
+            requirements. So, in this easter egg, I'm going to explain my entire
+            thought process for how I typically handle vague requirements.
+          </p>
+          <p>
+            When faced with vague requirements, the first thing I do is find the
+            stakeholder and ask for clarification. Sometimes they can't or won't
+            do that, so in that case I know that whatever I'm working on is
+            going to need iteration. Even when a stakeholder can't tell me what
+            they do want, in virtually every case they can tell me what they
+            don't want once they can see some work up on the screen. So, my
+            preferred solution in this case is to work as quickly as possible
+            and implement the simplest possible solutions to the requirements.
+            The faster I can come back with a working demo to the stakeholder,
+            the faster I can get my vague requirements clarified.
+          </p>
+          <p>
+            Ideally, this project would follow be followed up with a sitdown
+            with the stakeholder, where I would ask the following questions:
+          </p>
+          <ul>
+            <li>
+              Why is this data so inconsistent? Can it be cleaned up before it's
+              delivered to the interface? In the demo, I've made everything a
+              string, and as you can see, it makes for some odd results, and
+              some results that are invisible to the search feature, since
+              there's literally no information to search for some entries.
+            </li>
+            <li>
+              How do you define initials? I've made it that we get a
+              two-character-max set of initials for the avatars, but some of the
+              data doesn't have a name, so in those cases I've added a question
+              mark for the sake of visual consistency, and to highlight entries
+              that might need work.
+            </li>
+            <li>
+              Right now I've just added Bootstrap to give it a little structure
+              and make it easier to look at, don't get too hung up on the look
+              of the thing for now. When is the designer going to deliver the
+              mockups for this project?
+            </li>
+            <li>Do you want default values for missing subtitles?</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Home',
-}
+  name: "Home",
+  props: ["easteregg"],
+  data: function () {
+    return {
+      egg: this.easteregg,
+    };
+  },
+};
 </script>
