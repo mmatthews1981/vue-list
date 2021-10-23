@@ -3,24 +3,33 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h2>This is the List page</h2>
-      <label class="form-label" for="search">
+      <h2 class="text-center mb-4 display-2">Listing</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4 mb-5">
+       <label class="form-label text-center" for="search">
         Search
       </label>
       <input id="search" class="form-control" type='text' v-model="searchstring">
+      <small class="text-muted">Search is case-sensitive</small>
     </div>
   </div>
   <div class="row">
-    <h2>Total: {{ totalLength }} </h2>
+    <h3 class="text-center display-5">Total: {{ totalLength }} </h3>
     <div class="col-md-4" v-for="(item, index) in data.slice(0,10)" :key="index">
       <div class="card">
         <div class="card-body">
-          <div class="circle bg-primary">
-            <span class="initials text-white">{{ initials(item[1].name) }}</span>
-          </div>
-          <div class="d-inline-block">
-            <div class="card-title">{{ item[1].name }} ({{ item[0] }})</div>
-            <p class="card-text">{{ item[1].subtitle }}</p>
+          <div class="row">
+            <div class="col-2">
+              <div class="circle bg-primary">
+                <span class="initials text-white">{{ initials(item[1].name) }}</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-title">{{ item[1].name }} ({{ item[0] }})</div>
+              <p class="card-text">{{ item[1].subtitle }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -40,8 +49,7 @@
 
   .card {
     margin: 1rem;
-    border-width: 3px;
-    box-shadow: 10px 10px gray;
+    box-shadow: 10px 10px 5px 0 gray;
   }
 
   .avatar {
@@ -61,7 +69,7 @@
   .initials {
     line-height: 1;
     position: relative;
-    top: 6px;
+    top: 3px;
     text-transform: capitalize;
   }
 </style>

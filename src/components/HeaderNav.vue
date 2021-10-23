@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <router-link to="/" class="nav-link">Welcome</router-link>
+            <router-link to="/" class="nav-link" v-bind:class="{underline: easteregg}">Welcome</router-link>
         </li>
         <li class="nav-item">
             <router-link to="/listing" class="nav-link">Listing</router-link>
@@ -27,10 +27,21 @@
     </nav>
 </template>
 
+<script>
+export default {
+  name: "HeaderNav",
+  props: ["easteregg"],
+};
+</script>
+
 <style scoped>
 
 img {
     max-height: 48px;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 </style>

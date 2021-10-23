@@ -1,17 +1,38 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1 class="text-center">Welcome!</h1>
-      </div>
-      <div class="col-md-3">
-        <p>This site is <a href="https://inspiring-haibt-86ddb3.netlify.app">live</a> thanks to Netlify.</p>
-        <p><a href="https://github.com/mmatthews1981/vue-list">https://github.com/mmatthews1981/vue-list</a></p>
-        <p>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
-      </div>
-      <div class="col-md-9">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center mb-5 display-1">Welcome!</h1>
+        <p class="text-center">
+          This site is
+          <a href="https://inspiring-haibt-86ddb3.netlify.app">live</a> thanks
+          to Netlify.
+        </p>
+        <p class="text-center">
+          <a href="https://github.com/mmatthews1981/vue-list"
+            >https://github.com/mmatthews1981/vue-list</a
+          >
+        </p>
+        <p class="text-center mb-5">
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/flat-icons"
+            title="Flat Icons"
+            >Flat Icons</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </p>
         <div v-if="easteregg">
-          <p>Congratulations, you found the easter egg!</p>
+          <p class="lead">Congratulations, you found the easter egg!</p>
+          <p>
+            Faced with a great expanse of whitespace, I've decided to document
+            my thoughts on this code test, more or less as I complete it, and
+            explain the approach I took and how it relates to how I normally
+            work.
+          </p>
           <p>
             Completing this challenge was interesting. It's a relatively simple
             task done in a system I'm not fully fluent in yet (both Vue SPAs and
@@ -20,20 +41,20 @@
             made very clear to me, in both the instructions and when I asked for
             clarification, that this code test is as much a technical checkup as
             a serious examination of what a developer would do with vague
-            requirements. So, in this easter egg, I'm going to explain my entire
-            thought process for how I typically handle vague requirements.
+            requirements.
           </p>
           <p>
             When faced with vague requirements, the first thing I do is find the
             stakeholder and ask for clarification. Sometimes they can't or won't
-            do that, so in that case I know that whatever I'm working on is
-            going to need iteration. Even when a stakeholder can't tell me what
-            they do want, in virtually every case they can tell me what they
-            don't want once they can see some work up on the screen. So, my
-            preferred solution in this case is to work as quickly as possible
-            and implement the simplest possible solutions to the requirements.
-            The faster I can come back with a working demo to the stakeholder,
-            the faster I can get my vague requirements clarified.
+            do that, as has happened with this project, so in that case I know
+            that whatever I'm working on is going to need iteration. Even when a
+            stakeholder can't tell me what they do want, in virtually every case
+            they can tell me what they don't want once they can see some work up
+            on the screen. Therefore, my preferred solution in this case is to work as
+            quickly as possible and implement the simplest possible solutions to
+            the requirements. The faster I can come back with a working demo to
+            the stakeholder, the faster I can get my vague requirements
+            clarified.
           </p>
           <p>
             Ideally, this project would follow be followed up with a sitdown
@@ -62,6 +83,15 @@
             </li>
             <li>Do you want default values for missing subtitles?</li>
           </ul>
+          <p>
+            I went with vanilla Bootstrap for this project, and for that reason didn't
+            include SASS. We just need a little color and layout, and once the 
+            utility classes are deployed, very little additional CSS is needed. 
+            Scoped styles in the single-paged templates also help keep the styles
+            quick and dirty. As no comprehensive design requirements were included
+            with the requirements, it's better to keep things easy to refactor as I am anticipating
+            a full redesign soon. 
+          </p>
         </div>
       </div>
     </div>
@@ -71,11 +101,6 @@
 <script>
 export default {
   name: "Home",
-  props: ["easteregg"],
-  data: function () {
-    return {
-      egg: this.easteregg,
-    };
-  },
+  props: ["easteregg"]
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
 
   <div id="app">
-    <HeaderNav />
-    <main class="flex-shrink-1">
+    <HeaderNav :easteregg.sync="easteregg"/>
+    <main class="py-5">
       <router-view :easteregg.sync="easteregg" />
     </main>
     <div class="easter-egg">
@@ -39,5 +39,6 @@ export default {
     }
     .easter-egg img {
         height: 48px;
+        cursor: pointer;
     }
 </style>
