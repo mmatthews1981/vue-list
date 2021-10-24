@@ -4,6 +4,7 @@
   <div class="row">
     <div class="col">
       <h2 class="text-center mb-4 display-2">Listing</h2>
+      <p class="text-center">Use this search form to search for entries with specific names.</p>
     </div>
   </div>
   <div class="row justify-content-center">
@@ -16,13 +17,13 @@
     </div>
   </div>
   <div class="row">
-    <h3 class="text-center display-5">Total: {{ totalLength }} </h3>
-    <div class="col-md-4" v-for="(item, index) in data.slice(0,10)" :key="index">
+    <h3 class="text-center display-5" aria-atomic="true" aria-live="assertive">Total Results: {{ totalLength }}, Showing: {{ showingLength }}</h3>
+    <div class="col-md-4" v-for="(item, index) in data.slice(0,10)" :key="index" role="log">
       <div class="card">
         <div class="card-body">
           <div class="row">
             <div class="col-2">
-              <div class="circle bg-primary">
+              <div class="circle bg-primary" aria-hidden="true">
                 <span class="initials text-white">{{ initials(item[1].name) }}</span>
               </div>
             </div>
@@ -87,6 +88,9 @@ export default {
   computed: {
     totalLength() {
       return this.data.length;
+    },
+    showingLength() {
+      return this.data.length > 10 ? 10 : this.data.length;
     },
     data() {
       let vm = this;

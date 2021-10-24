@@ -5,10 +5,6 @@
     <main class="py-5">
       <router-view :easteregg.sync="easteregg" />
     </main>
-    <div class="easter-egg">
-      <img alt="Easter Egg" src="./assets/easter.png" @click="easteregg = !easteregg" tabindex="0">
-    </div>
-
 </div>
   
 </template>
@@ -29,16 +25,3 @@ export default {
 }
 
 </script>
-
-<style scoped>
-    .easter-egg {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      padding: 2rem;
-    }
-    .easter-egg img {
-        height: 48px;
-        cursor: pointer;
-    }
-</style>
