@@ -30,11 +30,11 @@
             ><img
               alt="Easter Egg"
               src="../assets/easter.png"
-              @click="easteregg = !easteregg"
+              @click="eggstate = !eggstate"
           /></router-link>
         </div>
         <div aria-atomic="true" aria-live="polite">
-          <div v-if="easteregg">
+          <div v-if="eggstate">
             <p id="egganchor" class="lead" aria-live="assertive">
               Congratulations, you found the easter egg!
             </p>
@@ -134,7 +134,11 @@
 <script>
 export default {
   name: "Home",
-  props: ["easteregg"],
+  data: function() {
+    return {
+      eggstate: this.easteregg,
+    };
+  },
 };
 </script>
 

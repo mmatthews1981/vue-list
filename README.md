@@ -16,7 +16,7 @@ npm install
 ```
 Finally, start the local development server:
 ```
-nom run serve
+npm run serve
 ```
 
 ### Compiles and minifies for production

@@ -1,9 +1,8 @@
 <template>
-
   <div id="app">
-    <HeaderNav :easteregg.sync="easteregg"/>
+    <HeaderNav />
     <main class="py-5">
-      <router-view :easteregg.sync="easteregg" />
+      <router-view />
     </main>
 </div>
   
@@ -12,16 +11,9 @@
 <script>
 import HeaderNav from './components/HeaderNav.vue'
 export default {
-
   components: {
     HeaderNav,
   },
-  data: function() {
-    return {
-      easteregg: false,
-    };
-  },
-
 }
 
 </script>
