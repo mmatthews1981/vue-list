@@ -26,12 +26,11 @@
           >
         </p>
         <div class="easter-egg">
-          <router-link to="/#egganchor" class=""
-            ><img
+          <img
               alt="Easter Egg"
               src="../assets/easter.png"
               @click="eggstate = !eggstate"
-          /></router-link>
+          />
         </div>
         <div aria-atomic="true" aria-live="polite">
           <div v-if="eggstate">
