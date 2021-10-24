@@ -27,7 +27,7 @@
         </h3>
       </div>
       <div
-        class="col-md-4"
+        class="col-lg-4"
         v-for="(item, index) in pageOfData"
         :key="index"
         role="log"
