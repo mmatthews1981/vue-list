@@ -1,5 +1,7 @@
 # vue-list
 
+A small Vue SPA to demonstrate live filtering of data entries. 
+
 ## Project setup
 ```
 npm install

@@ -21,7 +21,7 @@ x. Listing Page:
         x.2 List items should have a border and shadow
 x. The provided data should be placed into a new class which is imported into and used by the listing page
 7. The README should give directions of how to run the project locally
-8. The app should keep accessibility in mind
+x. The app should keep accessibility in mind
 
 NOTE:
 1. No tests required
