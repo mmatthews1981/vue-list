@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col-4 mb-5">
+    <div class="col-md-4 mb-5">
        <label class="form-label text-center" for="search">
         Search
       </label>
