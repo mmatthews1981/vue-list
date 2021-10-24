@@ -35,7 +35,7 @@
         </div>
         <div aria-atomic="true" aria-live="polite">
           <div v-if="easteregg">
-            <p id="egganchor" class="lead" aria-live="rude">
+            <p id="egganchor" class="lead" aria-live="assertive">
               Congratulations, you found the easter egg!
             </p>
             <p>
@@ -94,6 +94,10 @@
                 deliver the mockups for this project?
               </li>
               <li>Do you want default values for missing subtitles?</li>
+              <li>
+                This data gets delivered to me unordered, so it could, by
+                default show up in any order at runtime. Is this intentional?
+              </li>
             </ul>
             <p>
               I went with vanilla Bootstrap for this project, and for that
@@ -101,9 +105,24 @@
               layout, and once the utility classes are deployed, very little
               additional CSS is needed. Scoped styles in the single-paged
               templates also help keep the styles quick and dirty. As no
-              comprehensive design requirements were included with the
-              requirements, it's better to keep things easy to refactor as I am
+              comprehensive design requirements were included, it's better to keep things easy to refactor as I am
               anticipating a full redesign soon.
+            </p>
+            <p>
+              Accessibility for a feature like this, a dynamically filtering
+              list, is a challenge. The best solution I've been able to come up
+              with for this so far is to make sure that changes to the list
+              composition are announced in the reader without forcing the reader
+              to read the list of results, allowing the user to navigate the
+              list as they please. It seems to follow best practices from blogs,
+              which are often heavy with filtered lists, and I discovered that
+              if I ask a screen reader to read all the changes in a filtered
+              list, it tries to read all of the elements at the same time
+              without interrupting itself, resulting in a profoundly
+              psychedellic experience. I'm happy with the results right now, but
+              in the real world I would find an expert and ask them if they had
+              any advice, because I haven't been able to find accessibility
+              advice for this sort of UI pattern online.
             </p>
           </div>
         </div>
@@ -120,14 +139,14 @@ export default {
 </script>
 
 <style scoped>
-    .easter-egg {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      padding: 2rem;
-    }
-    .easter-egg img {
-        height: 48px;
-        cursor: pointer;
-    }
+.easter-egg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+}
+.easter-egg img {
+  height: 48px;
+  cursor: pointer;
+}
 </style>
