@@ -1,5 +1,4 @@
 <template>
-<div>
 <div class="container">
   <div class="row">
     <div class="col">
@@ -37,20 +36,14 @@
     </div>
   </div>
 </div>
-
-    
-</div>
 </template>
 
 <style scoped>
-  * {
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-
   .card {
     margin: 1rem;
     box-shadow: 10px 10px 5px 0 gray;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 
   .avatar {
@@ -79,7 +72,6 @@
 import {TheData} from '../services/getData';
 
 export default {
-  name: "List",
   data: function() {
     return {
       searchstring: ''

@@ -133,7 +133,6 @@
 
 <script>
 export default {
-  name: "Home",
   data: function() {
     return {
       eggstate: this.easteregg,
@@ -149,7 +148,7 @@ export default {
   left: 0;
   padding: 2rem;
 }
-.easter-egg img {
+img {
   height: 48px;
   cursor: pointer;
 }

@@ -1,6 +1,5 @@
 class TheData {
-
-    constructor(){
+    constructor() {
         this.data = {
             '1': { name: 'Number Uno', subtitle: 'The first one!' },
             '10': { name: 'Number Ten', subtitle: 'The tenth one!' },
@@ -25,11 +24,11 @@ class TheData {
             ' ': { name: '', subtitle: '098' },
             'nope': { name: null, subtitle: '' },
             'awesome': { name: 'The Champ', subtitle: 'ZZZBCBJJBJBEBFJBEWBFBEWWJBJBFEWFBEWJBFJJEBWJFEW#R#@J#BJQBBQWDWQWDBJBJBDQWBJBJEWFBF' },
-          }   
+        }
     }
     getData() {
         return this.data;
     }
 }
 
-export {TheData};
+export { TheData };

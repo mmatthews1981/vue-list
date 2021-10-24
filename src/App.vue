@@ -4,8 +4,7 @@
     <main class="py-5">
       <router-view />
     </main>
-</div>
-  
+  </div>
 </template>
 
 <script>
