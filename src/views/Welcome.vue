@@ -106,8 +106,9 @@
               layout, and once the utility classes are deployed, very little
               additional CSS is needed. Scoped styles in the single-paged
               templates also help keep the styles quick and dirty. As no
-              comprehensive design requirements were included, it's better to keep things easy to refactor as I am
-              anticipating a full redesign soon.
+              comprehensive design requirements were included, it's better to
+              keep things easy to refactor as I am anticipating a full redesign
+              soon.
             </p>
             <p>
               Accessibility for a feature like this, a dynamically filtering
@@ -125,6 +126,15 @@
               any advice, because I haven't been able to find accessibility
               advice for this sort of UI pattern online.
             </p>
+            <p>
+              And finally, right when I thought I was done, my spouse pointed
+              out that I'd forgotten to add the pagination, because of course I
+              had. I pulled in a plugin to handle that functionality, and ended
+              up having to tinker with it a bit to make it visible and legible
+              to screen readers. I think once I have the accessibility tinkering
+              done, I'm going to use this component for everything, I quite like
+              it, it's flexible and effective.
+            </p>
           </div>
         </div>
       </div>
@@ -134,7 +144,7 @@
 
 <script>
 export default {
-  data: function() {
+  data: function () {
     return {
       eggstate: this.easteregg,
     };
