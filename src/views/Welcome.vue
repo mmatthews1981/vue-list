@@ -46,13 +46,14 @@
             </p>
             <p>
               Completing this challenge was interesting. It's a relatively
-              simple task done in a system I'm not fully fluent in yet (both Vue
-              SPAs and ES6, thanks to a career full of legacy apps and
-              requirements to support old IE), so I learned quite a lot in the
-              process. It was made very clear to me, in both the instructions
-              and when I asked for clarification, that this code test is as much
-              a technical checkup as a serious examination of what a developer
-              would do with vague requirements.
+              simple task that asks for basically one of every basic Vue
+              feature, so I learned or refreshed quite a lot in the process. It
+              was made very clear to me, in both the instructions and when I
+              asked for clarification, that this code test is as much a
+              technical checkup as a serious examination of what a developer
+              would do with vague requirements, and I think it actually achieved
+              that splendidly. This is easily one of the best code tests I've
+              ever been given.
             </p>
             <p>
               When faced with vague requirements, the first thing I do is find
@@ -93,7 +94,7 @@
                 on the look of the thing for now. When is the designer going to
                 deliver the mockups for this project?
               </li>
-              <li>Do you want default values for missing subtitles?</li>
+              <li>Do you want default values for missing names or subtitles?</li>
               <li>Should the search be case-sensitive or case-insensitive?</li>
               <li>
                 This data gets delivered to me unordered, so it could, by
@@ -104,11 +105,13 @@
               I went with vanilla Bootstrap for this project, and for that
               reason didn't include SASS. We just need a little color and
               layout, and once the utility classes are deployed, very little
-              additional CSS is needed. Scoped styles in the single-paged
-              templates also help keep the styles quick and dirty. As no
-              comprehensive design requirements were included, it's better to
-              keep things easy to refactor as I am anticipating a full redesign
-              soon.
+              additional CSS is needed, and as valid CSS is also valid SASS,
+              we're good for the moment and this code will be just fine when and
+              if we add SASS to the project later. Scoped styles in the
+              single-paged templates also help keep the styles quick and dirty.
+              As no comprehensive design requirements were included, it's better
+              to keep things easy to refactor as I am anticipating a full
+              redesign soon.
             </p>
             <p>
               Accessibility for a feature like this, a dynamically filtering
@@ -125,6 +128,14 @@
               in the real world I would find an expert and ask them if they had
               any advice, because I haven't been able to find accessibility
               advice for this sort of UI pattern online.
+            </p>
+            <p>
+              I originally attached the easter egg to the App component and
+              passed it's value as a prop to the Welcome and the Header
+              components, so that it's state persisted across both views, but I
+              took that out and attached it directly to the Welcome component
+              instead, to simplify everything. That behavior is in the repo if I
+              need it and can be re-added easily if that comes up.
             </p>
             <p>
               And finally, right when I thought I was done, my spouse pointed
