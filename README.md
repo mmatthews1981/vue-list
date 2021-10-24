@@ -1,6 +1,14 @@
 # vue-list
 
-A small Vue SPA to demonstrate live filtering of data entries. 
+A small Vue SPA to demonstrate live filtering of data entries. Sample deployment: [Click here for live demo](https://inspiring-haibt-86ddb3.netlify.app/)
+
+To run this project locally, make sure [Nodejs](https://nodejs.org/en/) and [Git](https://git-scm.com/downloads) are installed on your local machine. 
+
+First, clone the repo:
+
+```
+git clone https://github.com/mmatthews1981/vue-list.git
+```
 
 ## Project setup
 ```
