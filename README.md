@@ -4,20 +4,19 @@ A small Vue SPA to demonstrate live filtering of data entries. Sample deployment
 
 To run this project locally, make sure [Nodejs](https://nodejs.org/en/) and [Git](https://git-scm.com/downloads) are installed on your local machine. 
 
-First, clone the repo:
+First, in the terminal, clone the repo and navigate to the repo folder:
 
 ```
 git clone https://github.com/mmatthews1981/vue-list.git
+cd vue-list
 ```
-
-## Project setup
+Then, install the project dependencies:
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+Finally, start the local development server:
 ```
-npm run serve
+nom run serve
 ```
 
 ### Compiles and minifies for production
@@ -29,6 +28,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
