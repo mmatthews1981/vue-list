@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <h1 class="text-center mb-5 display-1">Welcome</h1>
         <p class="text-center">
           This site is
