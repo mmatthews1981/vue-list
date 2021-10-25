@@ -30,6 +30,7 @@
               alt="Easter Egg"
               src="../assets/easter.png"
               @click="eggstate = !eggstate"
+              tabindex="0"
           />
         </div>
         <div aria-atomic="true" aria-live="polite">
